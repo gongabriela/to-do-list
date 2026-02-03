@@ -1,0 +1,67 @@
+/*---------------------------------------- ESTILO GLOBAL ----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap');
+
+:root {
+    /* Fundos */
+    --cor-fundo-pagina: #1b182c; /* Roxo escuro */
+    --cor-fundo-card: #282440; 
+    --cor-fundo-card-esquerdo: #211e33;  /* Roxo um pouco mais claro para destacar os cards */
+    --cor-borda: #454158;        /* Roxo acinzentado para bordas subtis */
+    
+    /* Cores de Destaque */
+    --cor-rosa: #ff95d6;         /* rosa (para bordas principais e destaques) */
+    --cor-azul-ceu: #8be9fd;     /* azul céu (para links, botões e ícones) */
+    --cor-banana: #ffe97d;       /* amarelo banana (para títulos principais) */
+    --cor-roxo-claro: #bd93f9;   /* roxo claro (para subtítulos) */
+    
+    /* Texto */
+    --cor-texto-principal: #e0def4; /*branco gelo (melhor para leitura) */
+    
+    /* Fontes */
+    --fonte-titulo: 'Outfit', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-texto);
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-banana);
+}
+
+/* -------------------- barra de navegação -------------------- */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------------------- main --------------------------- */
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-de-tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--cor-borda);
+    border-radius: 20px;
+    width: 50%;
+}
+
+/* -------------------------- footer --------------------------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
