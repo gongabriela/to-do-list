@@ -39,9 +39,11 @@ function criarHTMLTarefa(texto) {
     //cria o botao de deletar como <button>
     const btnLixeira = document.createElement('button');
     btnLixeira.classList.add('btn-lixeira');
-    btnLixeira.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    const iconLixeira = document.createElement('i');
+    iconLixeira.classList.add('fa-solid', 'fa-trash');
     
     //adicionar o span e o botao no container li
+    btnLixeira.appendChild(iconLixeira);
     li.appendChild(spanTexto);
     li.appendChild(btnLixeira);
 

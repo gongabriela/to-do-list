@@ -1,4 +1,4 @@
-/*---------------------------------------- ESTILO GLOBAL ----------------------------------------*/
+/* ---------------------------- ESTILO GLOBAL ---------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap');
 
@@ -35,13 +35,51 @@ h1, h2, h3, h4 {
     color: var(--cor-banana);
 }
 
-/* -------------------- barra de navegação -------------------- */
+/* ---------------------------- barra de navegação ---------------------------- */
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+
+    background-color: rgba(27, 24, 44, 0.9); 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--cor-borda);
+
 }
 
-/* ---------------------------- main --------------------------- */
+.nav-bar-links, .nav-bar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-bar-links a {
+    color: var(--cor-azul-ceu);
+    transition: 0.3s;
+}
+
+.nav-bar-links a:hover  {
+    color: var(--cor-rosa);
+}
+
+.btn-toggle {
+    color: var(--cor-azul-ceu);
+    background-color: transparent;
+    border: solid 2px var(--cor-azul-ceu);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-toggle:hover {
+    color: var(--cor-rosa);
+    border-color: solid 2px var(--cor-rosa);
+}
+
+/* ---------------------------- main ---------------------------- */
 
 .conteudo-principal {
     display: flex;
@@ -49,37 +87,88 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+.lista-de-tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--cor-rosa);
+    box-shadow: 0 0 30px rgba(255, 149, 214, 0.4);
+    border-radius: 20px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
 .cabecalho {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: solid 2px var(--cor-borda);
+    padding-bottom: 10px;
+    width: 100%; /* align-items:center no .lista-de-tarefas 
+                    encolheo cabeçalho ate ficar so do tamanho 
+                    do seu conteudo. o width 100% força ele a 
+                    ocupar 100% da largura*/
+
+}
+
+.adicionar-tarefa, #campo-tarefa {
+    margin-bottom: 10px;
 }
 
 #campo-tarefa {
     display: none;
 }
 
-.lista-de-tarefas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid var(--cor-borda);
-    border-radius: 20px;
-    width: 50%;
-}
-
 .tarefas {
     list-style: none;
+    width: 80%;
+    padding: 0;
+    gap: 10px;
 }
 
+.container-tarefa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 2px solid var(--cor-rosa);
+}
+
+.texto-tarefa {
+    word-break: break-all;
+    cursor: pointer;
+}
 .concluida {
     text-decoration: line-through; /* faz o risco na tarefa concluida */
 }
 
-/* -------------------------- footer --------------------------- */
+/* ---------------------------- estilizacao dos botoes ---------------------------- */
+
+.adicionar-tarefa, .btn-lixeira {
+    background-color: transparent;
+    color: var(--cor-azul-ceu);
+    border: solid 2px var(--cor-azul-ceu);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.adicionar-tarefa:hover, .btn-lixeira:hover {
+    color: var(--cor-rosa);
+    border-color: var(--cor-rosa);
+}
+
+/* ---------------------------- footer ---------------------------- */
 
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    background-color: rgba(27, 24, 44, 0.9); 
+    border-top: 1px solid var(--cor-borda);
 }
