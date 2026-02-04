@@ -6,6 +6,7 @@
     <title>to-do-list</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="toDoList.js" defer></script>
 </head>
 
 <body>
@@ -36,12 +37,9 @@
             <div class="cabecalho">
                 <h1 class="titulo-principal">To-Do List</h1>
                 <button type="button" class="adicionar-tarefa">adicionar nova tarefa</button>
+                <input type="text" id="campo-tarefa" placeholder="Digite sua tarefa... "></input>
             </div>
-            <ul class="lista">
-                <li class="tarefa">
-                    <p>tarefa 1</p>
-                </li>
-            </ul>
+            <ul class="tarefas"></ul>
         </div>
        
     </main>
