@@ -29,9 +29,11 @@ function alternarVisualizacao() {
 function criarHTMLTarefa(texto) {
     //cria o container li
     const li = document.createElement('li');
+    li.classList.add('container-tarefa');
 
     //cria o texto como <span>
     const spanTexto = document.createElement('span');
+    spanTexto.classList.add('texto-tarefa');
     spanTexto.innerText = texto;
 
     //cria o botao de deletar como <button>
@@ -73,13 +75,13 @@ function gerenciarCliqueNaLista(evento) {
     // ve se clicou no botao de lixeira
     const btnLixeira = elementoClicado.closest('.btn-lixeira');
     if (btnLixeira) {
-        const tarefaParaRemover = btnLixeira.closest('li');
+        const tarefaParaRemover = btnLixeira.closest('.container-tarefa');
         tarefaParaRemover.remove();
         return;
     }
 
     // ve se clicou em uma tarefa
-    const tarefaParaRiscar = elementoClicado.closest('li');
+    const tarefaParaRiscar = elementoClicado.closest('.container-tarefa');
     if (tarefaParaRiscar) {
         tarefaParaRiscar.classList.toggle('concluida');
     }
