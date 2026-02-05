@@ -180,3 +180,12 @@ h1, h2, h3, h4 {
     background-color: rgba(27, 24, 44, 0.9); 
     border-top: 1px solid var(--cor-borda);
 }
+
+.fa-solid.fa-heart {
+    color: var(--cor-rosa);
+}
+.footer-mensagem, .footer-copyright {
+    font-size: 0.7em;
+    color: var(--cor-texto-principal);
+    text-align: center;
+}
